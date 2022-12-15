@@ -1,0 +1,55 @@
+﻿@page
+@model eva2DWJGC3.Pages.Select.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+   
+}
+
+<h1>Select</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaTchNotasEvaluación[0].MdUuid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaTchNotasEvaluación[0].MdFch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaTchNotasEvaluación[0].CodAlumno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaTchNotasEvaluación[0].NotaEvaluacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaTchNotasEvaluación[0].CodEvaluacionNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EvaTchNotasEvaluación) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MdUuid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MdFch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodAlumno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaEvaluacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodEvaluacionNavigation.CodEvaluacion)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
